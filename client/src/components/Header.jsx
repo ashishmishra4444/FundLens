@@ -3,7 +3,8 @@ import Login from "./Login";
 
 const Header = () => {
   return (
-    <header className="relative min-h-screen w-full overflow-hidden">
+    <header className="relative z-10 min-h-screen w-full overflow-hidden items-center px-4 sm:px-6 md:px-12 lg:px-20 pt-16 ">
+      {/* relative z-10 flex min-h-screen items-center px-4 sm:px-6 md:px-12 lg:px-20 pt-16 */}
       <div
         className="absolute inset-0 bg-cover bg-center scale-110"
         style={{

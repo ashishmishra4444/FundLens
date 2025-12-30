@@ -1,22 +1,19 @@
-import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import React, { Suspense, lazy } from "react";
+import { Routes, Route } from "react-router-dom";
 
-const Landing = lazy(() => import("./pages/Landing"));
-const Login = lazy(() => import("./pages/Login"));
-const Register = lazy(() => import("./pages/Register"));
+const LandingPage = lazy(() => import("./pages/LandingPage"));
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-        </Routes>
-      </Suspense>
-    </BrowserRouter>
+    <Suspense
+      fallback={
+        <div style={{ padding: "40px", textAlign: "center" }}>Loading...</div>
+      }
+    >
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+      </Routes>
+    </Suspense>
   );
 };
 

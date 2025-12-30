@@ -16,7 +16,7 @@ const Header = () => {
       <div className="absolute inset-0 bg-black/70" />
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-screen items-center px-4 sm:px-6 md:px-12 lg:px-20">
+      <div className="relative z-10 flex min-h-screen items-center ">
         <div
           className="
             grid w-full gap-12

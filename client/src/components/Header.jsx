@@ -41,7 +41,7 @@ const Header = () => {
                 font-bold tracking-tight
               "
             >
-              MyFutureFund
+              FUNDLENS
             </h1>
 
             <p
@@ -74,8 +74,14 @@ const Header = () => {
           </div>
 
           {/* RIGHT SECTION (LOGIN CARD) */}
-          <div className="flex items-center justify-center">
-            <div className="w-full max-w-sm sm:max-w-md">
+          <div className="flex justify-center lg:justify-end">
+            <div
+              className="
+                w-full max-w-md
+                lg:mr-6 xl:mr-12
+                lg:translate-x-6 xl:translate-x-10
+            "
+            >
               <Login />
             </div>
           </div>

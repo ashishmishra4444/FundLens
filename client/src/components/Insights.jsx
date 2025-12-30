@@ -75,14 +75,14 @@ const Insights = () => {
                   "
                 >
                   <div className="flex items-center justify-center h-12 w-12 rounded-xl bg-blue-500/10 mb-4">
-                    <Icon className="h-6 w-6 text-teal-500" />
+                    <Icon className="h-6 w-6 text-teal-400" />
                   </div>
 
                   <h3 className="text-lg font-semibold text-white">
                     {item.title}
                   </h3>
 
-                  <p className="mt-2 text-2xl font-bold text-teal-500">
+                  <p className="mt-2 text-2xl font-bold text-teal-400">
                     {item.value}
                   </p>
 
@@ -104,7 +104,7 @@ const Insights = () => {
                 mt-6
                 inline-flex items-center justify-center
                 rounded-full
-                bg-linear-to-r from-teal-700 to-cyan-400/25
+                bg-linear-to-r from-teal-500/80 to-cyan-500
                 px-8 py-3
                 text-sm font-semibold text-white
                 hover:opacity-85

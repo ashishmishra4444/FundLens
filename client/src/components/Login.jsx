@@ -30,13 +30,13 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full rounded-2xl bg-[#0b1220]/80 backdrop-blur-xl border border-white/10 p-8 text-white shadow-2xl">
+    <div className="w-full rounded-2xl bg-white/5 shadow-[0_0_40px_rgba(45,212,191,0.15)] backdrop-blur-xl border border-white/10 p-8 text-white ">
 
       {/* BRAND */}
       <div className="pt-6 pb-6 text-center relative overflow-visible">
       
         {/* MAIN TEXT */}
-        <h1 className="relative z-10 text-3xl font-bold tracking-wide text-blue-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.35)]">
+        <h1 className="relative z-10 text-3xl font-bold tracking-wide text-teal-400 drop-shadow-[0_0_12px_rgba(34,211,238,0.35)]">
           FUNDLENS
         </h1>
 
@@ -45,7 +45,7 @@ const Login = () => {
             absolute left-1/2 -translate-x-1/2
             top-[3.2rem]
             text-3xl font-bold tracking-wide
-            text-blue-400
+            text-teal-400
             opacity-30
             blur-sm
             pointer-events-none
@@ -79,7 +79,7 @@ const Login = () => {
                       <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400" />
                       <Input
                         placeholder="Full Name"
-                        className="pl-10 bg-[#111827] border border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-blue-500"
+                        className="pl-10 bg-[#111827] border border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-teal-500"
                         {...field}
                       />
                     </div>
@@ -102,7 +102,7 @@ const Login = () => {
                     <Input
                       type="email"
                       placeholder="Email"
-                      className="pl-10 bg-[#111827] border border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-blue-500"
+                      className="pl-10 bg-[#111827] border border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-teal-500"
                       {...field}
                     />
                   </div>
@@ -123,7 +123,7 @@ const Login = () => {
                     <Input
                       type={showPassword ? "text" : "password"}
                       placeholder="Password"
-                      className="pl-10 pr-10 bg-[#111827] border border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-blue-500"
+                      className="pl-10 pr-10 bg-[#111827] border border-white/10 text-white placeholder:text-gray-400 focus-visible:ring-1 focus-visible:ring-teal-500"
                       {...field}
                     />
                     <button
@@ -141,7 +141,7 @@ const Login = () => {
 
           {/* FORGOT */}
           {mode === "login" && (
-            <div className="text-right text-xs text-blue-400 cursor-pointer">
+            <div className="text-right text-xs text-teal-400 cursor-pointer">
               Forgot password?
             </div>
           )}
@@ -149,7 +149,7 @@ const Login = () => {
           {/* PRIMARY CTA */}
           <Button
             type="submit"
-            className="w-full bg-linear-to-r from-blue-700 to-cyan-600 hover:opacity-80 text-white font-semibold cursor-pointer"
+            className="w-full bg-linear-to-r from-teal-500 to-cyan-500 hover:opacity-80 text-white font-semibold cursor-pointer"
           >
             {mode === "login" ? "SIGN IN" : "CREATE ACCOUNT"}
           </Button>
@@ -165,7 +165,7 @@ const Login = () => {
           <Button
             type="button"
             variant="outline"
-            className="w-full bg-white text-black hover:bg-gray-400 cursor-pointer"
+            className="w-full bg-white text-black hover:bg-white/80 cursor-pointer"
           >
             CONTINUE WITH GOOGLE
           </Button>
@@ -177,7 +177,7 @@ const Login = () => {
                 Don't have an account?{" "}
                 <span
                   onClick={() => setMode("signup")}
-                  className="text-blue-400 cursor-pointer"
+                  className="text-teal-400 cursor-pointer"
                 >
                   SIGN UP NOW
                 </span>
@@ -187,7 +187,7 @@ const Login = () => {
                 Already have an account?{" "}
                 <span
                   onClick={() => setMode("login")}
-                  className="text-blue-400 cursor-pointer"
+                  className="text-teal-400 cursor-pointer"
                 >
                   LOGIN
                 </span>

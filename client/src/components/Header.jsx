@@ -27,7 +27,7 @@ const Header = () => {
           {/* LEFT SECTION */}
           <div
             className="
-              flex flex-col justify-center
+              flex flex-col justify-center 
               text-center lg:text-left
               text-white
             "

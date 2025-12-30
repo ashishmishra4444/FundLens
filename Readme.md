@@ -1,4 +1,4 @@
-# MyFutureFund 📈
+# FundLens 📈
 
 A goal-based SIP and investment planning platform that educates users on **how, why, and when** to invest using behavioral finance insights.
 

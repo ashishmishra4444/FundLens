@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 
@@ -12,6 +12,8 @@ import {
   FormItem,
   FormMessage,
 } from "@/components/ui/form";
+import { AuthContext } from "../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [mode, setMode] = useState("login");
@@ -25,8 +27,18 @@ const Login = () => {
     },
   });
 
+  const {login}=useContext(AuthContext);
+
+  const navigate=useNavigate();
+
   const onSubmit = (values) => {
-    console.log(values, mode);
+    const dummyUser={
+      id:Date.now(),
+      name:values.name||"Demo User",
+      email:values.email,
+    }
+    login(dummyUser);
+    navigate("/dashboard");
   };
 
   return (

@@ -5,6 +5,7 @@ import ProtectedRoute from "./routes/ProtectedRoute";
 
 const LandingPage = lazy(() => import("./pages/LandingPage"));
 const Dashboard = lazy(() => import("./pages/Dashboard"));
+const DashboardLayout = lazy(() => import("./layouts/DashboardLayout"));
 
 const App = () => {
   return (
@@ -22,10 +23,12 @@ const App = () => {
             path="/dashboard"
             element={
               <ProtectedRoute>
-                <Dashboard />
+                <DashboardLayout />
               </ProtectedRoute>
             }
-          />
+          >
+            <Route index element={<Dashboard />} />
+          </Route>
         </Routes>
       </Suspense>
     </AuthContextProvider>
